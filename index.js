@@ -1,9 +1,32 @@
-const triplo = function (n=5){
+//arrow function
+const triplo = (valor) => valor * 3 // se tivesse {} o return é obrigatório; se tivesse mais de uma instrução as {} são obrigatórias
+console.log(triplo(5))
+
+/* const dobro = (valor) => valor * 2
+console.log(dobro(10))
+ */
+
+/* const hello = () => console.log ('Hello <3')
+hello() */
+
+
+/* const dobro = n => n * 2
+console.log(dobro(2)) */
+
+
+/* function dobro(n){
+    return n * 2
+}
+ */
+
+
+
+/* const triplo = function (n=5){
     return n * 3
 }
 
 console.log(triplo(8))
-console.log(triplo())
+console.log(triplo()) */
 
 //const triplo = function(n){
    // if(n!== undefined)

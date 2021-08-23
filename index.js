@@ -1,6 +1,32 @@
+let pessoa = {
+    nome:"Maria",
+    idade:21,
+    endereco:{
+        logradouro: "Rua da Mooca",
+        numero:231
+    }
+}
+console.log(`Me chamo ${pessoa.nome},
+ tenho ${pessoa.idade} anos 
+ e moro na ${pessoa.endereco['logradouro']} 
+ nº ${pessoa.endereco['numero']}.`)
+
+/* let pessoa = {
+    nome:"Ana",
+    idade:19
+}
+console.log("Me chamo " + pessoa.nome)
+console.log("Tenho " + pessoa['idade'] + ' anos.') */
+
+
+//XML - Passado
+
+//JavaScript Object Notation: JSON
+
+
 //arrow function
-const triplo = (valor) => valor * 3 // se tivesse {} o return é obrigatório; se tivesse mais de uma instrução as {} são obrigatórias
-console.log(triplo(5))
+/* const triplo = (valor) => valor * 3 // se tivesse {} o return é obrigatório; se tivesse mais de uma instrução as {} são obrigatórias
+console.log(triplo(5)) */
 
 /* const dobro = (valor) => valor * 2
 console.log(dobro(10))

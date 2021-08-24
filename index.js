@@ -1,4 +1,126 @@
-let pessoa = {
+
+
+
+/* const fs = require("fs")//abrindo arquivo
+const abrirArquivo = function(nomeArquivo){
+    const exibirArquivo = function(erro, conteudo){
+        if(erro){
+            console.log(`Ocorreu um erro: ${erro}`)
+
+        }
+        else{
+            console.log(conteudo.toString())
+        }
+    }
+    fs.readFile(nomeArquivo, exibirArquivo) 
+}
+abrirArquivo("arquivo.txt")  */
+
+
+
+//Modelos Single Threaded
+/* function demorada(tempo) {
+console.log(`demorada ${tempo}`)
+const atualMaisTempo = new Date().getTime() + tempo
+//não esqueça do ;, única instrução no corpo do while
+while (new Date().getTime() <= atualMaisTempo);
+const d = 8 + 4;
+return d;
+ }
+setTimeout(function (){demorada(2000)}, 2000)
+setTimeout(function (){demorada(1000)}, 1000)
+ console.log("chegou ao fim do script principal") */
+
+
+/* setTimeout(function(){//assíncrona ou não bloqueante
+    console.log('dentro do timeout', 0)
+})
+const a = new Date().getTime() + 1000
+while(new Date().getTime() <= a);
+console.log('fora do timeout')
+ */
+
+
+/* function demorada(){/*assíncrona ou não bloqueante com enfileiramento,consiste no uso
+    da função setTimeout. */
+    /* const atualMais2Segundos = new Date().getTime + 2000
+    while(new Date().getTime() <= atualMais2Segundos);
+    const d = 8 + 4
+    return d
+}
+const a = 2 + 3
+const b = 5 + 9
+setTimeout(function(){
+    const d = demorada()
+    console.log(d)
+
+},500)//função será executada depois de 500 milissegundos
+//depois essas linhas executam sem esperar
+const e = a + b
+console.log(e)*/ 
+
+
+/* function demorada(){//modelo síncrono ou bloqueante
+    const atualMais2Segundos = new Date().getTime() + 2000
+    while (new Date().getTime() <= atualMais2Segundos);
+    const d = 8 + 4
+    return d
+}
+const a = 2 + 3
+const b = 5 + 9
+const d = demorada()
+
+const e = 2 + a + b
+console.log(e) */
+
+
+
+/* let calculadora = {//funções em um objeto JSON
+    soma: (a,b) => a + b, //arrow
+    subtracao: function(a,b){ //function simples
+        return a - b
+    },
+};
+console.log(`2 + 5 = ${calculadora.soma(2,5)}`)
+console.log(`2-3 = ${calculadora.subtracao(2,3)}`) */
+
+
+
+/* let concessionaria = {
+    cnpj: "000111222210001-45",
+    endereco: {
+        logradouro: "Rua B, 4" ,
+        numero: 123,
+        bairro: "Vila Mariana",
+    },
+    veiculos:[//lista
+        {
+            marca: "Renault",
+            modelo:"Sandero",
+            anoDeFabricacao:2010,
+        },
+        {
+            marca: "Ford",
+            modelo:"Ka",
+            anoDeFabricacao:2015,
+        },
+        {
+            marca: "Chevrolet",
+            modelo:"Cruze",
+            anoDeFabricacao:2002,
+        },
+
+    ],
+};
+for(let veiculo of concessionaria.veiculos){
+    console.log(`Marca: ${veiculo.marca}`)
+    console.log(`Modelo: ${veiculo.modelo}`)
+    console.log(`Ano de Fabricação: ${veiculo.anoDeFabricacao}`)
+} */
+
+
+
+/* let pessoa = {
     nome:"Maria",
     idade:21,
     endereco:{
@@ -9,7 +131,7 @@ let pessoa = {
 console.log(`Me chamo ${pessoa.nome},
  tenho ${pessoa.idade} anos 
  e moro na ${pessoa.endereco['logradouro']} 
- nº ${pessoa.endereco['numero']}.`)
+ nº ${pessoa.endereco['numero']}.`) */
 
 /* let pessoa = {
     nome:"Ana",

@@ -1,3 +1,23 @@
+const fs = require ('fs')
+const abrirArquivo = function (nomeArquivo){
+    const exibirConteudo = function (erro, conteudo){
+        //console.log(`${erro ? erro : conteudo.toString()}`)
+        if(erro){
+            console.log("Erro: " + erro)
+        }
+        else{
+            console.log("Conteúdo lido: " + conteudo.toString())
+            const dobro = +conteudo.toString() * 2
+            const finalizar = function(erro){
+                console.log(`${erro ? erro : 'Salvou o dobro com sucesso!'}`)
+            }
+            fs.writeFile('dobro.txt', dobro.toString(), finalizar)
+        }
+
+    }
+    fs.readFile(nomeArquivo,exibirConteudo)
+}
+abrirArquivo("arquivo.txt")
 
 
 

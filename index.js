@@ -1,4 +1,100 @@
-const fs = require ('fs')
+//para usar await tem que ser async
+/* async function chamadaComAwait() {
+    //note que não há paralelismo implícito
+    //somente haverá paralelismo se a função chamadautilizar explicitamente
+    const f1 = await fatorial(5);
+    console.log(f1);
+    const f2 = await fatorial(-1);
+    console.log(f2);
+    } */
+
+
+/* function chamadaComThenCatch() {
+    fatorial(5)
+    .then((res) => console.log(res))
+    .catch((res) => console.log(res));
+    
+    fatorial(-1)
+    .then((res) => console.log(res))
+    .catch((res) => console.log(res));
+    }
+    chamadaComThenCatch(); */
+
+
+/* function fatorial(n) {
+     if (n < 0) return Promise.reject("Valor não pode ser negativo");
+     let res = 1;
+     for (let i = 2; i <= n; i++) res *= i;
+     return Promise.resolve(res);
+     } */
+
+
+/* async function hello(nome) {
+     return "Oi, " + nome;
+     }
+     const boasVindas = hello("João");
+     console.log(boasVindas);
+     boasVindas.then((res) => console.log(res)); */
+
+
+
+
+/* function calculoRapidinho(numero) {
+     return numero >= 0
+      Promise.resolve((numero * (numero + 1)) / 2)
+     Promise.reject("Somente valores positivos, por favor");
+    }
+
+     calculoRapidinho(10)
+     .then((resultado) => {
+     console.log(resultado);
+     })
+     .catch((err) => {
+     console.log(err);
+     });
+     calculoRapidinho(-1)
+     .then((resultado) => {
+     console.log(resultado);
+     })
+     .catch((err) => {
+     console.log(err);
+    });
+     console.log("esperando..."); */
+
+
+
+
+/* function calculoDemorado(numero){
+    return new Promise(function(resolve,reject){
+        let res = 0
+        for(let i=1; i <= numero; i++)
+        res += i
+        resolve(res)
+    })
+}
+calculoDemorado(10000).then ((res)) => {
+    console.log("Resultado " + res)
+}
+//const p= calculoDemorado(100)
+//console.log(p)
+console.log("Encerrando a execução do script principal...") */
+
+
+/* function calculoDemorado(numero) {
+    let res = 0
+    for(let i=1; i <= numero; i++)
+    res +=i
+    return res
+}
+
+console.log(`Soma(n): ${calculoDemorado(10)}`)
+console.log("Encerrando o script principal...") */
+
+
+
+
+
+/* const fs = require ('fs')
 const abrirArquivo = function (nomeArquivo){
     const exibirConteudo = function (erro, conteudo){
         //console.log(`${erro ? erro : conteudo.toString()}`)
@@ -9,15 +105,20 @@ const abrirArquivo = function (nomeArquivo){
             console.log("Conteúdo lido: " + conteudo.toString())
             const dobro = +conteudo.toString() * 2
             const finalizar = function(erro){
-                console.log(`${erro ? erro : 'Salvou o dobro com sucesso!'}`)
-            }
+                console.log(`${erro ? erro : 'Salvou o dobro com sucesso!'}`) */
+/*                 const outraCallback = function(){
+
+                }
+
+                fs.readFile('', outraCallback) */
+/*             }
             fs.writeFile('dobro.txt', dobro.toString(), finalizar)
         }
 
     }
     fs.readFile(nomeArquivo,exibirConteudo)
 }
-abrirArquivo("arquivo.txt")
+abrirArquivo("arquivo.txt") */
 
 
 
